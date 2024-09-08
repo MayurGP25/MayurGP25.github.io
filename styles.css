@@ -51,6 +51,16 @@ body {
     color: #6C63FF;
 }
 
+.summary-details {
+    list-style: none;
+    padding: 0;
+}
+
+.summary-details li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
 #interview h2, footer h2 {
     font-size: 28px;
     color: #6C63FF;
