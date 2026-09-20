@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications · Mayur Parvatikar</title>
+<meta name="description" content="Papers by Mayur Parvatikar on interpretability, alignment, recommendation, and NLP.">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">MP</span>
+      <span>Mayur Parvatikar</span>
+    </a>
+    <div class="header-right">
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">About</a>
+        <a href="index.html#timeline">Timeline</a>
+        <a href="publications.html" aria-current="page">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+      </nav>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Publications</h1>
+      <p>Four papers across interpretability, alignment, recommendation and NLP. My name is in bold;
+      <a href="#">Google Scholar</a> has the current list.</p><!-- EDIT: Scholar URL -->
+    </header>
+
+    <div class="page-body">
+
+      <h2 class="group-label">2026</h2>
+      <ul class="pub-list">
+
+        <li class="pub-item reveal" id="path-dissect">
+          <span class="pub-num">[01]</span>
+          <div>
+            <div class="meta-row">
+              <span class="status status--ok">MICCAI 2026 Workshop</span>
+              <span class="status">First author</span>
+            </div>
+            <h3>PATH-DISSECT: Interpreting Concept Representation and Causal Reliance in Pathology Foundation Models with Sparse Autoencoders</h3>
+            <p class="authors"><span class="me">Mayur Parvatikar</span>, Xingjian Li, Min Xu</p>
+            <p class="venue">MI4MedFM Workshop, Medical Image Computing and Computer Assisted Intervention (MICCAI), 2026</p>
+            <p class="tldr">Uses sparse autoencoders to recover interpretable concepts from pathology foundation models, then
+            tests which of those learned concepts the classifier causally relies on for its predictions.</p>
+            <div class="chip-row">
+              <a class="chip" href="https://claude.ai/artifact/VpfUEAo7BVs6aiAtDxrm1Q" target="_blank" rel="noopener">Overview ↗</a>
+              <a class="chip" href="#">PDF</a><!-- EDIT -->
+              <a class="chip" href="#">Code</a><!-- EDIT -->
+              <button class="chip" type="button" data-bibtex-toggle="bib-path-dissect" aria-expanded="false">BibTeX</button>
+              <button class="chip" type="button" data-copy="bib-path-dissect">Copy BibTeX</button>
+            </div>
+            <pre class="bibtex" id="bib-path-dissect" hidden>@inproceedings{parvatikar2026pathdissect,
+  title     = {{PATH-DISSECT}: Interpreting Concept Representation and Causal Reliance
+               in Pathology Foundation Models with Sparse Autoencoders},
+  author    = {Parvatikar, Mayur and Li, Xingjian and Xu, Min},
+  booktitle = {MI4MedFM Workshop, Medical Image Computing and Computer Assisted
+               Intervention (MICCAI)},
+  year      = {2026}
+}</pre>
+          </div>
+        </li>
+
+        <li class="pub-item reveal" id="mentis">
+          <span class="pub-num">[02]</span>
+          <div>
+            <div class="meta-row">
+              <span class="status status--review">To be submitted · AAAI 2027</span>
+              <span class="status">Third author</span>
+            </div>
+            <h3>MENTIS: What Belief Changes Under Alignment? Measuring Multi-Scale Latent Torsion in Language Models</h3>
+            <p class="authors">Partha Pratim Saha, Samarth Raina, <span class="me">Mayur Parvatikar</span>, Amit Dhanda, Vinija Jain, Aman Chadha, Amitava Das</p>
+            <p class="venue">To be submitted to AAAI 2027, AI Alignment Track</p>
+            <p class="tldr">Introduces a geometry-based framework that measures how preference alignment reorganizes a model’s
+            internal representations, localizing where and how strongly alignment reshapes different concepts.</p>
+          </div>
+        </li>
+
+      </ul>
+
+      <h2 class="group-label">2025</h2>
+      <ul class="pub-list">
+
+        <li class="pub-item reveal" id="music">
+          <span class="pub-num">[03]</span>
+          <div>
+            <div class="meta-row">
+              <span class="status status--ok">Best Paper Presentation Award</span>
+              <span class="status">First author</span>
+            </div>
+            <h3>A User-Aware Indian Music Recommendation System</h3>
+            <p class="authors"><span class="me">Mayur Parvatikar</span>, Manoj Mukunda, Jayanth Chikkarangaiah, Mamatha G. S., G. Shobha</p>
+            <p class="venue">RAAI 2025, Nanyang Technological University, Singapore</p>
+            <p class="tldr">Combines an LSTM speech-emotion model with health-aware attributes for content-based music
+            recommendation, outperforming Spotify’s live queue on Precision@5.</p>
+            <div class="chip-row">
+              <a class="chip" href="#">PDF</a><!-- EDIT -->
+              <button class="chip" type="button" data-bibtex-toggle="bib-music" aria-expanded="false">BibTeX</button>
+              <button class="chip" type="button" data-copy="bib-music">Copy BibTeX</button>
+            </div>
+            <pre class="bibtex" id="bib-music" hidden>@inproceedings{parvatikar2025useraware,
+  title     = {A User-Aware Indian Music Recommendation System},
+  author    = {Parvatikar, Mayur and Mukunda, Manoj and Chikkarangaiah, Jayanth
+               and Mamatha, G. S. and Shobha, G.},
+  booktitle = {Recent Advances in Artificial Intelligence (RAAI)},
+  year      = {2025}
+}</pre>
+          </div>
+        </li>
+
+      </ul>
+
+      <h2 class="group-label">2024</h2>
+      <ul class="pub-list">
+
+        <li class="pub-item reveal" id="simile">
+          <span class="pub-num">[04]</span>
+          <div>
+            <div class="meta-row"><span class="status">First author</span></div>
+            <h3>Deep Learning Approaches to Simile Detection: Insights from BERT and LSTM</h3>
+            <p class="authors"><span class="me">Mayur G. Parvatikar</span>, Sanjan Rao, P. M. Jayanth Rao, B. M. Sagar</p>
+            <p class="venue">ICCCNT 2024, IIT Mandi</p>
+            <p class="tldr">Compares BERT- and LSTM-based models for detecting similes in text, analyzing where contextual
+            embeddings help most for figurative-language understanding.</p>
+            <div class="chip-row">
+              <a class="chip" href="#">PDF</a><!-- EDIT -->
+              <button class="chip" type="button" data-bibtex-toggle="bib-simile" aria-expanded="false">BibTeX</button>
+              <button class="chip" type="button" data-copy="bib-simile">Copy BibTeX</button>
+            </div>
+            <pre class="bibtex" id="bib-simile" hidden>@inproceedings{parvatikar2024simile,
+  title     = {Deep Learning Approaches to Simile Detection: Insights from
+               {BERT} and {LSTM}},
+  author    = {Parvatikar, Mayur G. and Rao, Sanjan and Jayanth Rao, P. M.
+               and Sagar, B. M.},
+  booktitle = {International Conference on Computing, Communication and
+               Networking Technologies (ICCCNT)},
+  year      = {2024}
+}</pre>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span data-year>2026</span> Mayur Parvatikar · Bengaluru, India</p>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="mailto:mayur.parvatikar@gmail.com">Email</a>
+      <a href="#">Google Scholar</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
