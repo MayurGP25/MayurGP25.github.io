@@ -108,22 +108,91 @@
     });
   });
 
-  /* --------------------------------------------------------------- reveal */
-  var reveals = document.querySelectorAll(".reveal");
+  /* ------------------------------------------------------------- timeline
+     Cards alternate sides, ease in from their side when they scroll into
+     view, and the rail fills down to the middle of the viewport, filling
+     each dot as it passes. */
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var timeline = document.querySelector(".timeline");
 
-  if ("IntersectionObserver" in window && !reduce) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          io.unobserve(entry.target);
-        }
+  if (timeline) {
+    var tlItems = Array.prototype.slice.call(timeline.querySelectorAll(".tl-item"));
+    var progress = document.createElement("span");
+    progress.className = "tl-progress";
+    progress.setAttribute("aria-hidden", "true");
+    timeline.insertBefore(progress, timeline.firstChild);
+
+    var wide = window.matchMedia("(min-width: 901px)");
+
+    // Alternate sides, then on wide screens interleave: each card starts a
+    // short step below the previous one, but never above the end of the
+    // last card on its own side.
+    var layout = function () {
+      var visible = tlItems.filter(function (it) { return !it.hidden; });
+      visible.forEach(function (it, i) { it.classList.toggle("is-left", i % 2 === 1); });
+
+      if (!wide.matches) {
+        timeline.classList.remove("is-packed");
+        timeline.style.height = "";
+        tlItems.forEach(function (it) { it.style.top = ""; });
+        return;
+      }
+      timeline.classList.add("is-packed");
+      var step = 120, gap = 28, pad = 16;
+      var bottoms = [], prevTop = -Infinity, max = 0;
+      visible.forEach(function (it, i) {
+        var top = Math.max(i ? prevTop + step : pad, i >= 2 ? bottoms[i - 2] + gap : pad);
+        it.style.top = top + "px";
+        bottoms[i] = top + it.offsetHeight;
+        prevTop = top;
+        max = Math.max(max, bottoms[i]);
       });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+      timeline.style.height = max + "px";
+    };
+
+    var ticking = false;
+    var update = function () {
+      ticking = false;
+      var rect = timeline.getBoundingClientRect();
+      var line = window.innerHeight * 0.62;
+      var p = Math.min(1, Math.max(0, (line - rect.top) / rect.height));
+      timeline.style.setProperty("--p", reduce ? 1 : p.toFixed(4));
+      var reach = rect.top + rect.height * (reduce ? 1 : p);
+      tlItems.forEach(function (it) {
+        var dot = it.querySelector(".tl-dot");
+        if (!dot || it.hidden) return;
+        var d = dot.getBoundingClientRect();
+        it.classList.toggle("is-passed", d.top + d.height / 2 <= reach);
+      });
+    };
+    var request = function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    };
+
+    layout();
+    update();
+    window.addEventListener("scroll", request, { passive: true });
+    var relayout = function () { layout(); request(); };
+    window.addEventListener("resize", relayout);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+    window.addEventListener("load", relayout);
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("[data-filter]")) relayout();
+    });
+
+    if ("IntersectionObserver" in window && !reduce) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -12% 0px" });
+      tlItems.forEach(function (el) { io.observe(el); });
+    } else {
+      tlItems.forEach(function (el) { el.classList.add("is-visible"); });
+    }
   }
 
   /* --------------------------------------------------------------- footer */
