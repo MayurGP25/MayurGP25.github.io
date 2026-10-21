@@ -44,9 +44,9 @@
   <div class="wrap">
     <header class="page-head">
       <h1>Curriculum Vitae</h1>
-      <p>Mayur Parvatikar · Bengaluru, India · <a href="mailto:mayur.parvatikar@gmail.com">mayur.parvatikar@gmail.com</a></p>
+      <p>Mayur Parvatikar · Bengaluru, India · <a href="mailto:mayur.parvatikar@gmail.com">mayur.parvatikar@gmail.com</a> · <a href="https://www.linkedin.com/in/mayurparvatikar" target="_blank" rel="noopener">LinkedIn</a></p>
       <div class="actions">
-        <a class="btn btn-primary" href="assets/cv.pdf">
+        <a class="btn btn-primary" href="assets/Mayur_Parvatikar_CV.pdf" download="Mayur_Parvatikar_CV.pdf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
           Download PDF
         </a>
@@ -57,10 +57,11 @@
       <nav class="cv-toc" aria-label="CV sections">
         <ul>
           <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
           <li><a href="#research">Research</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Industry</a></li>
           <li><a href="#publications">Publications</a></li>
-          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#achievements">Honors</a></li>
           <li><a href="#skills">Skills</a></li>
         </ul>
       </nav>
@@ -70,35 +71,10 @@
           <h2>Education</h2>
           <div class="cv-entry">
             <h3>B.E., Information Science and Engineering</h3>
-            <span class="when">2021 – 2025</span>
-            <p class="where">R.V. College of Engineering, Bengaluru, India · CGPA 9.28 / 10</p>
+            <span class="when">Aug 2025</span>
+            <p class="where">R. V. College of Engineering, Bengaluru, India · CGPA 9.28 / 10</p>
             <ul>
-              <li>Coursework: Operating Systems, Data Structures &amp; Algorithms, Computer Networks, DBMS, AI &amp; ML, Deep Learning, NLP, Prompt Engineering.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="cv-section" id="experience">
-          <h2>Work experience</h2>
-          <div class="cv-entry">
-            <h3>Software Developer I — SAP Labs</h3>
-            <span class="when">Jul 2025 – Present</span>
-            <p class="where">Bengaluru, India · Data Privacy Engineering</p>
-            <ul>
-              <li>Deliver cloud-native data-privacy services on SAP BTP, enabling GDPR-compliant reuse services across global regions.</li>
-              <li>Reduced DoS risk and improved API performance by profiling bottlenecks with Apache JMeter and Dynatrace, then optimizing Java HikariCP connection pooling, database views and repository-layer access patterns.</li>
-              <li>Executed a zero-downtime migration of 100K+ records across 20+ AWS, GCP and Azure regions using idempotent, retry-resilient scripts, a Factory pattern for schema versioning and canary deployments on Jenkins.</li>
-              <li>Enhanced reverse-proxy services for certificate management and personal-data export on Kubernetes and Cloud Foundry.</li>
-            </ul>
-          </div>
-          <div class="cv-entry">
-            <h3>Software Developer Intern — SAP Labs</h3>
-            <span class="when">Jan – Jul 2025</span>
-            <p class="where">Bengaluru, India</p>
-            <ul>
-              <li>Engineered Node.js microservices for metering and alerting with OAuth integration, exponential-backoff retries and automated email-notification workflows.</li>
-              <li>Led a “Try-It-Out” feature for Java Spring Boot APIs using OpenAPI specs and sandbox environments, published it to the SAP Internal API Hub and presented it to senior leadership.</li>
-              <li>Improved code maintainability by 50% through large-scale refactoring and Repository-pattern adoption; hardened releases with input validation (JSoup) and scanning via Checkmarx, SonarQube and GHAS.</li>
+              <li>Selected coursework: Data Structures and Algorithms, Operating Systems, Computer Networks, Database Management Systems, Software Engineering, AI &amp; ML, Deep Learning, NLP.</li>
             </ul>
           </div>
         </section>
@@ -106,59 +82,105 @@
         <section class="cv-section" id="research">
           <h2>Research experience</h2>
           <div class="cv-entry">
-            <h3>Constrained Decoding Can Reverse Which Inputs Look Uncertain</h3>
-            <span class="when">Jun 2026 – Present</span>
-            <p class="where">LLM uncertainty research · paper in preparation, UncertaiNLP 2026 (EMNLP workshop)</p>
+            <h3>Research Collaborator — Xu Lab, Carnegie Mellon University</h3>
+            <span class="when">Sep 2025 – Present</span>
+            <p class="where">Pittsburgh, PA · Remote</p>
             <ul>
-              <li>Designed controlled experiments on Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct across 100 prompts using XGrammar-based JSON constraints.</li>
-              <li>Found a reversal in uncertainty ranking after masking: AUROC 0.125–0.175 before, 0.613–0.750 after.</li>
-              <li>Proposed pre-mask entropy and surviving probability as more reliable signals for uncertainty-aware LLM routing.</li>
+              <li>Spearheaded PATH-DISSECT, applying mechanistic-interpretability tools to interpret what pathology foundation models represent and what their downstream classifiers rely on.</li>
+              <li>Trained sparse autoencoders on frozen UNI and Virchow2 foundation-model embeddings, decomposing dense, entangled features into sparse latents that align with pathologist-recognizable concepts.</li>
+              <li>Demonstrated that the framework separates concept representation from classifier reliance and mitigates shortcut reliance in practice; accepted as a first-author paper at the MI4MedFM workshop at MICCAI 2026.</li>
             </ul>
           </div>
+
           <div class="cv-entry">
-            <h3>Decoding-Time Language Model Alignment</h3>
-            <span class="when">May 2026 – Present</span>
-            <p class="where">LLM alignment research</p>
+            <h3>Research Collaborator — Pragya Lab, BITS Pilani – Goa Campus</h3>
+            <span class="when">Mar 2025 – Jul 2026</span>
+            <p class="where">Goa, India · Remote</p>
             <ul>
-              <li>Trained LoRA adapters for helpfulness, harmlessness and honesty using DPO on HH-RLHF and UltraFeedback.</li>
-              <li>Composed adapters at decoding time to steer alignment without retraining; evaluated with LLM-as-a-judge on toxicity, quality and refusal rate.</li>
+              <li>Developed Swiss-Knife, a decode-time alignment framework that steers a frozen Qwen2.5-7B with hot-swappable helpful, honest and harmless DPO-LoRA adapters and switches objectives in 0.05 ms without retraining.</li>
+              <li>Achieved a harmonic F1 of 0.797 vs. 0.750 over 5 decode-time baselines on the helpful-honest-harmless frontier, with the lowest refusal rate and 47% lower toxicity; submitted to AAAI 2027.</li>
+              <li>Built hidden-state extraction, torsion metrics and CKA, RepE and cosine baselines for MENTIS across 4 aligned 7–8B model pairs, where torsion separated safe from unsafe prompts at AUC 0.89 vs. 0.64; submitted to AAAI 2027.</li>
             </ul>
           </div>
+
           <div class="cv-entry">
-            <h3>PATH-DISSECT — Interpreting Pathology Foundation Models</h3>
-            <span class="when">2025 – 2026</span>
-            <p class="where">with Dr. Xingjian Li &amp; Prof. Min Xu, Computational Biology Department, Carnegie Mellon University</p>
-            <ul>
-              <li>Developed an interpretability framework using sparse autoencoders to disentangle concept-level representations in pathology foundation models.</li>
-              <li>Investigated classifier reliance on learned biological concepts by mapping SAE features to downstream predictions.</li>
-            </ul>
-          </div>
-          <div class="cv-entry">
-            <h3>Machine Learning Project Intern — SPIRE Lab, IISc</h3>
-            <span class="when">Oct 2024 – Jan 2025</span>
-            <p class="where">Indian Institute of Science, Bengaluru</p>
-            <ul>
-              <li>Contributed to Formbot, an “AI for Social Good” system for natural-language interaction with government forms via ASR, OCR and LLMs.</li>
-              <li>Built a ViT-based OCR pipeline over 200+ low-quality documents, benchmarking EasyOCR and SuryaOCR on WER and CER.</li>
-              <li>Proposed form-splitting and preprocessing that mitigated hallucinations and improved accuracy on degraded inputs.</li>
-            </ul>
-          </div>
-          <div class="cv-entry">
-            <h3>Machine Learning Engineer Intern — Samsung Research (SRIB)</h3>
-            <span class="when">May – Jul 2024</span>
+            <h3>Undergraduate Researcher — R. V. College of Engineering</h3>
+            <span class="when">Jul – Dec 2024</span>
             <p class="where">Bengaluru, India</p>
             <ul>
-              <li>Reimplemented an encoder-decoder architecture for view synthesis from 2D “in-the-wild” images; delivered a real-time 3D rendering proof of concept for on-device AI.</li>
-              <li>Deployed PyTorch-scripted models on Android via Chaquopy, achieving 12% latency reduction.</li>
+              <li>Developed a user-aware recommendation system that maps a listener’s emotion and health condition to therapeutic attributes of Indian classical music.</li>
+              <li>Trained an LSTM-based speech emotion recognition model on RAVDESS using MFCC, RMS and ZCR features, reaching 93.6% validation accuracy across 8 emotions.</li>
+              <li>Evaluated recommendations with a custom Mean Reciprocal Rank metric and with precision and diversity against Spotify’s live queue; won the Best Paper Presentation Award at IEEE RAAI 2025, NTU Singapore.</li>
             </ul>
           </div>
+
           <div class="cv-entry">
-            <h3>Machine Learning Research Intern — Samsung Research, PRISM Program</h3>
+            <h3>Research Intern, PRISM Program — Samsung R&amp;D Institute India</h3>
             <span class="when">May – Nov 2023</span>
             <p class="where">Bengaluru, India</p>
             <ul>
-              <li>Curated and annotated a gameplay-frame dataset, then fine-tuned a UNet segmentation model for distortion-free video frame interpolation.</li>
-              <li>Benchmarked with PSNR, SSIM and LPIPS; awarded the Certificate of Excellence ($500), Samsung’s highest PRISM honour.</li>
+              <li>Trained U-Net-based architectures to segment static regions in gameplay frames on a custom Roboflow-annotated dataset.</li>
+              <li>Utilized the masks with image inpainting for distortion-free frame interpolation via optical-flow and kernel-based algorithms.</li>
+              <li>Validated outputs with PSNR, SSIM, LPIPS and Beyond Compare, earning the $500 Certificate of Excellence, the top honour.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="cv-section" id="projects">
+          <h2>Academic and research projects</h2>
+          <div class="cv-entry">
+            <h3>Constrained Decoding Can Reverse Which Inputs Look Uncertain</h3>
+            <span class="when">May – Aug 2026</span>
+            <p class="where">Independent research project · Bengaluru, India</p>
+            <ul>
+              <li>Built a custom decoding loop that captures logits before and after XGrammar JSON masking on Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct across 100 controlled prompts.</li>
+              <li>Discovered that grammar masking reverses which inputs look uncertain, shifting ranking AUROC from 0.13–0.18 to 0.61–0.75 while post-mask entropy still looks normal, so confidence monitors receive no warning.</li>
+              <li>Demonstrated that the reversal depends on how surviving probability mass is distributed rather than how much is removed, establishing pre-mask entropy as the reliable signal; sole-author paper accepted at UncertaiNLP @ EMNLP 2026.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Formbot OCR Pipeline — Machine Learning Project Intern, SPIRE Lab, IISc</h3>
+            <span class="when">Oct 2024 – Jan 2025</span>
+            <p class="where">Indian Institute of Science, Bengaluru</p>
+            <ul>
+              <li>Evaluated CRNN-based EasyOCR and ViT-based SuryaOCR against hand-built ground truth on 200+ low-quality government forms for Formbot, a voice assistant that helps citizens complete forms, exposing high word and character error rates.</li>
+              <li>Engineered a preprocessing and form-splitting pipeline that cut the average error rate by 40%, including hallucinated text.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="cv-section" id="experience">
+          <h2>Industry experience</h2>
+          <div class="cv-entry">
+            <h3>Associate Platform Engineer — SAP Labs India</h3>
+            <span class="when">Jul 2025 – Present</span>
+            <p class="where">Bengaluru, India · Data Privacy Engineering</p>
+            <ul>
+              <li>Engineered a reverse-proxy layer with OAuth-to-custom-token conversion that fronts downstream data-privacy services consumed by 200+ stakeholder applications.</li>
+              <li>Reduced Consent Management Service unavailability by 80% by diagnosing bottlenecks with Dynatrace and JMeter load tests, eliminating N+1 queries, adding database views to cap HikariCP connections and introducing Redis caching.</li>
+              <li>Executed a zero-downtime migration of 100K+ records across canary and production regions on AWS, Azure and GCP using idempotent scripts, Jenkins pipelines and asynchronous polling APIs.</li>
+              <li>Enabled multiple lines of business to onboard their AI agents to the platform by resolving agent memory, provisioning and Kubernetes deployment issues, and customized the n8n operator to enforce role-based credential access.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Platform Engineer Intern — SAP Labs India</h3>
+            <span class="when">Jan – Jul 2025</span>
+            <p class="where">Bengaluru, India</p>
+            <ul>
+              <li>Engineered Node.js microservices that automate metering-data validation and alerting, with OAuth-based authentication, exponential-backoff retries and integration with an email notification service.</li>
+              <li>Built a “Try-It-Out” feature for Java Spring Boot APIs, published it on SAP’s internal API Hub and presented it to leadership, and resolved a critical penetration-testing vulnerability with JSoup validation.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <h3>Machine Learning Engineer Intern — Samsung R&amp;D Institute India</h3>
+            <span class="when">May – Jul 2024</span>
+            <p class="where">Bengaluru, India</p>
+            <ul>
+              <li>Implemented a novel encoder–decoder architecture for view synthesis from in-the-wild 2D images, delivering a real-time 3D rendering proof of concept for on-device AI.</li>
+              <li>Integrated TorchScript models into an Android app with an in-app Python runtime via Chaquopy, reducing latency by 12% through asynchronous execution and optimized image preprocessing.</li>
             </ul>
           </div>
         </section>
@@ -166,63 +188,78 @@
         <section class="cv-section" id="publications">
           <h2>Publications</h2>
           <div class="cv-entry">
+            <h3>Constrained Decoding Can Reverse Which Inputs Look Uncertain</h3>
+            <span class="when">2026</span>
+            <p class="where"><strong>M. Parvatikar</strong> · 3rd Workshop on Uncertainty-Aware NLP (UncertaiNLP) at EMNLP 2026 · accepted</p>
+          </div>
+
+          <div class="cv-entry">
             <h3>PATH-DISSECT: Interpreting Concept Representation and Causal Reliance in Pathology Foundation Models with Sparse Autoencoders</h3>
             <span class="when">2026</span>
-            <p class="where"><strong>M. Parvatikar</strong>, X. Li, M. Xu · MI4MedFM Workshop, MICCAI 2026 (first author)</p>
+            <p class="where"><strong>M. Parvatikar</strong>, X. Li, M. Xu · MI4MedFM Workshop at MICCAI 2026, Strasbourg, France · accepted</p>
           </div>
+
+          <div class="cv-entry">
+            <h3>Swiss-Knife: A Framework for Reconfigurable Externalised Multi-Objective Alignment at Decode Time</h3>
+            <span class="when">2026</span>
+            <p class="where">A. Karmakar, <strong>M. Parvatikar</strong>, S. Dhoot, A. Dhanda, A. Chadha, K. Wanaskar, V. Jain, A. Das · <a href="https://arxiv.org/abs/2609.22226" target="_blank" rel="noopener">arXiv:2609.22226</a> · submitted to AAAI 2027</p>
+          </div>
+
           <div class="cv-entry">
             <h3>MENTIS: What Belief Changes Under Alignment? Measuring Multi-Scale Latent Torsion in Language Models</h3>
-            <span class="when">2027</span>
-            <p class="where">P. P. Saha, S. Raina, <strong>M. Parvatikar</strong>, A. Dhanda, V. Jain, A. Chadha, A. Das · to be submitted, AAAI 2027 (third author)</p>
+            <span class="when">2026</span>
+            <p class="where">P. P. Saha, S. Raina, <strong>M. Parvatikar</strong>, A. Dhanda, V. Jain, A. Chadha, A. Das · <a href="https://arxiv.org/abs/2606.01060" target="_blank" rel="noopener">arXiv:2606.01060</a> · submitted to AAAI 2027</p>
           </div>
+
           <div class="cv-entry">
             <h3>A User-Aware Indian Music Recommendation System</h3>
             <span class="when">2025</span>
-            <p class="where"><strong>M. Parvatikar</strong>, M. Mukunda, J. Chikkarangaiah, Mamatha G. S., G. Shobha · RAAI 2025, NTU Singapore — Best Paper Presentation Award (first author)</p>
+            <p class="where"><strong>M. Parvatikar</strong>, M. Mukunda, J. Chikkarangaiah, Mamatha G. S., G. Shobha · IEEE RAAI 2025, Singapore</p>
           </div>
+
           <div class="cv-entry">
             <h3>Deep Learning Approaches to Simile Detection: Insights from BERT and LSTM</h3>
             <span class="when">2024</span>
-            <p class="where"><strong>M. G. Parvatikar</strong>, S. Rao, P. M. Jayanth Rao, B. M. Sagar · ICCCNT 2024, IIT Mandi (first author)</p>
+            <p class="where"><strong>M. G. Parvatikar</strong>, S. Rao, P. M. J. Rao, B. M. Sagar · IEEE ICCCNT 2024, IIT Mandi</p>
           </div>
         </section>
 
         <section class="cv-section" id="achievements">
-          <h2>Achievements</h2>
+          <h2>Honors and leadership</h2>
           <div class="cv-entry">
-            <h3>Amazon ML Summer School 2024</h3>
+            <h3>Amazon ML Summer School</h3>
             <span class="when">2024</span>
-            <p class="where">Selected in the top 5% of 70,000+ applicants for a four-week program taught by Amazon applied scientists.</p>
+            <p class="where">Selected in the top 5% of 70,000+ applicants.</p>
           </div>
+
           <div class="cv-entry">
-            <h3>Certificate of Excellence ($500), Samsung PRISM</h3>
-            <span class="when">2023</span>
-            <p class="where">Samsung’s highest honour for the PRISM research program.</p>
+            <h3>Secretary, IEEE Student Branch</h3>
+            <span class="when">Dec 2023 – Nov 2024</span>
+            <p class="where">R. V. College of Engineering, Bengaluru.</p>
           </div>
+
           <div class="cv-entry">
-            <h3>Best Paper Presentation Award, RAAI 2025</h3>
+            <h3>Best Paper Presentation Award, IEEE RAAI 2025</h3>
             <span class="when">2025</span>
             <p class="where">Nanyang Technological University, Singapore.</p>
           </div>
+
           <div class="cv-entry">
-            <h3>NPTEL top percentiles</h3>
-            <span class="when">2023 – 2024</span>
-            <p class="where">Top 2% in Data Science for Engineers (IIT Madras); top 5% in Data Mining (IIT Kharagpur).</p>
-          </div>
-          <div class="cv-entry">
-            <h3>Best Project Award, Technovaganza 2022</h3>
-            <span class="when">2022</span>
-            <p class="where">R.V. College of Engineering, for a Robotic Arm for Soldering.</p>
+            <h3>Certificate of Excellence ($500), Samsung PRISM</h3>
+            <span class="when">2023</span>
+            <p class="where">Top honour of the PRISM research program.</p>
           </div>
         </section>
 
         <section class="cv-section" id="skills">
           <h2>Technical skills</h2>
           <dl class="skills">
-            <dt>Programming</dt><dd>Java, Python, SQL, JavaScript</dd>
-            <dt>ML / AI</dt><dd>PyTorch, LLM fine-tuning (SFT, DPO, PEFT/LoRA), mechanistic interpretability, sparse autoencoders, NLP, RAG, LangChain/LangGraph, computer vision, deep learning</dd>
-            <dt>Tools</dt><dd>Spring Boot, Node.js, FastAPI, Docker, Kubernetes, SAP BTP, AWS, Git, Jenkins, JMeter, Dynatrace, Roboflow</dd>
-            <dt>Certifications</dt><dd>Data Science, IIT Madras (NPTEL, 2023); Data Mining, IIT Kharagpur (NPTEL, 2024)</dd>
+            <dt>Languages</dt><dd>Python, Java, C++, SQL, JavaScript</dd>
+            <dt>ML / DL</dt><dd>PyTorch, TensorFlow, Hugging Face, scikit-learn, NumPy, Pandas, vLLM, XGrammar</dd>
+            <dt>LLM methods</dt><dd>LoRA, DPO, SFT, sparse autoencoders, RAG, FAISS, LangChain</dd>
+            <dt>Computer vision</dt><dd>OpenCV, U-Net, Vision Transformers, EasyOCR, SuryaOCR, TorchScript, Roboflow</dd>
+            <dt>Infrastructure</dt><dd>Docker, Kubernetes, AWS, Azure, GCP, Linux, Git, Jenkins CI/CD, Dynatrace</dd>
+            <dt>Backend</dt><dd>Spring Boot, Node.js, FastAPI, Redis</dd>
           </dl>
         </section>
       </div>
@@ -236,8 +273,8 @@
     <nav class="footer-links" aria-label="Elsewhere">
       <a href="mailto:mayur.parvatikar@gmail.com">Email</a>
       <a href="#">Google Scholar</a>
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
+      <a href="https://github.com/mayurgp25" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mayurparvatikar" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </div>
 </footer>

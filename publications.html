@@ -44,7 +44,7 @@
   <div class="wrap">
     <header class="page-head">
       <h1>Publications</h1>
-      <p>Four papers across interpretability, alignment, recommendation and NLP. My name is in bold;
+      <p>Six papers across interpretability, alignment, uncertainty, recommendation and NLP. My name is in bold;
       <a href="#">Google Scholar</a> has the current list.</p><!-- EDIT: Scholar URL -->
     </header>
 
@@ -53,18 +53,46 @@
       <h2 class="group-label">2026</h2>
       <ul class="pub-list">
 
-        <li class="pub-item reveal" id="path-dissect">
+        <li class="pub-item reveal" id="uncertainty">
           <span class="pub-num">[01]</span>
           <div>
             <div class="meta-row">
-              <span class="status status--ok">MICCAI 2026 Workshop</span>
+              <span class="status status--ok">Accepted · UncertaiNLP @ EMNLP 2026</span>
+              <span class="status">Sole author</span>
+            </div>
+            <h3>Constrained Decoding Can Reverse Which Inputs Look Uncertain</h3>
+            <p class="authors"><span class="me">Mayur Parvatikar</span></p>
+            <p class="venue">The 3rd Workshop on Uncertainty-Aware NLP (UncertaiNLP) at EMNLP 2026</p>
+            <p class="tldr">Grammar-constrained (XGrammar JSON) decoding reverses which inputs look uncertain: ranking AUROC moves from
+            0.13–0.18 to 0.61–0.75 while post-mask entropy still looks normal. The reversal tracks how surviving probability
+            mass is distributed, making pre-mask entropy the reliable signal.</p>
+            <div class="chip-row">
+              <a class="chip" href="#">PDF</a><!-- EDIT -->
+              <button class="chip" type="button" data-bibtex-toggle="bib-uncertainty" aria-expanded="false">BibTeX</button>
+              <button class="chip" type="button" data-copy="bib-uncertainty">Copy BibTeX</button>
+            </div>
+            <pre class="bibtex" id="bib-uncertainty" hidden>@inproceedings{parvatikar2026constrained,
+  title     = {Constrained Decoding Can Reverse Which Inputs Look Uncertain},
+  author    = {Parvatikar, Mayur},
+  booktitle = {Proceedings of the 3rd Workshop on Uncertainty-Aware NLP (UncertaiNLP)
+               at EMNLP},
+  year      = {2026}
+}</pre>
+          </div>
+        </li>
+
+        <li class="pub-item reveal" id="path-dissect">
+          <span class="pub-num">[02]</span>
+          <div>
+            <div class="meta-row">
+              <span class="status status--ok">Accepted · MI4MedFM @ MICCAI 2026</span>
               <span class="status">First author</span>
             </div>
             <h3>PATH-DISSECT: Interpreting Concept Representation and Causal Reliance in Pathology Foundation Models with Sparse Autoencoders</h3>
             <p class="authors"><span class="me">Mayur Parvatikar</span>, Xingjian Li, Min Xu</p>
-            <p class="venue">MI4MedFM Workshop, Medical Image Computing and Computer Assisted Intervention (MICCAI), 2026</p>
-            <p class="tldr">Uses sparse autoencoders to recover interpretable concepts from pathology foundation models, then
-            tests which of those learned concepts the classifier causally relies on for its predictions.</p>
+            <p class="venue">Mechanistic Interpretability for Medical Foundation Models (MI4MedFM) Workshop at MICCAI 2026, Strasbourg, France</p>
+            <p class="tldr">Sparse autoencoders trained on frozen UNI and Virchow2 embeddings recover pathologist-recognizable concepts; the
+            framework separates what the model represents from what its classifier relies on, and mitigates shortcut reliance.</p>
             <div class="chip-row">
               <a class="chip" href="https://claude.ai/artifact/VpfUEAo7BVs6aiAtDxrm1Q" target="_blank" rel="noopener">Overview ↗</a>
               <a class="chip" href="#">PDF</a><!-- EDIT -->
@@ -76,25 +104,67 @@
   title     = {{PATH-DISSECT}: Interpreting Concept Representation and Causal Reliance
                in Pathology Foundation Models with Sparse Autoencoders},
   author    = {Parvatikar, Mayur and Li, Xingjian and Xu, Min},
-  booktitle = {MI4MedFM Workshop, Medical Image Computing and Computer Assisted
-               Intervention (MICCAI)},
+  booktitle = {Mechanistic Interpretability for Medical Foundation Models (MI4MedFM)
+               Workshop at MICCAI},
   year      = {2026}
 }</pre>
           </div>
         </li>
 
-        <li class="pub-item reveal" id="mentis">
-          <span class="pub-num">[02]</span>
+        <li class="pub-item reveal" id="swiss-knife">
+          <span class="pub-num">[03]</span>
           <div>
             <div class="meta-row">
-              <span class="status status--review">To be submitted · AAAI 2027</span>
+              <span class="status status--review">Submitted · AAAI 2027</span>
+              <span class="status">Second author</span>
+            </div>
+            <h3>Swiss-Knife: A Framework for Reconfigurable Externalised Multi-Objective Alignment at Decode Time</h3>
+            <p class="authors">A. Karmakar, <span class="me">Mayur Parvatikar</span>, S. Dhoot, A. Dhanda, A. Chadha, K. Wanaskar, V. Jain, A. Das</p>
+            <p class="venue">arXiv:2609.22226, 2026 · submitted to AAAI 2027</p>
+            <p class="tldr">Steers a frozen Qwen2.5-7B with hot-swappable helpful, honest and harmless DPO-LoRA adapters, switching objectives in
+            0.05 ms without retraining. Harmonic F1 0.797 vs. 0.750 over five decode-time baselines, with the lowest refusal
+            rate and 47% lower toxicity.</p>
+            <div class="chip-row">
+              <a class="chip" href="https://arxiv.org/abs/2609.22226" target="_blank" rel="noopener">arXiv ↗</a>
+              <button class="chip" type="button" data-bibtex-toggle="bib-swiss-knife" aria-expanded="false">BibTeX</button>
+              <button class="chip" type="button" data-copy="bib-swiss-knife">Copy BibTeX</button>
+            </div>
+            <pre class="bibtex" id="bib-swiss-knife" hidden>@article{karmakar2026swissknife,
+  title   = {Swiss-Knife: A Framework for Reconfigurable Externalised Multi-Objective
+             Alignment at Decode Time},
+  author  = {Karmakar, A. and Parvatikar, Mayur and Dhoot, S. and Dhanda, A. and
+             Chadha, A. and Wanaskar, K. and Jain, V. and Das, A.},
+  journal = {arXiv preprint arXiv:2609.22226},
+  year    = {2026}
+}</pre>
+          </div>
+        </li>
+
+        <li class="pub-item reveal" id="mentis">
+          <span class="pub-num">[04]</span>
+          <div>
+            <div class="meta-row">
+              <span class="status status--review">Submitted · AAAI 2027</span>
               <span class="status">Third author</span>
             </div>
             <h3>MENTIS: What Belief Changes Under Alignment? Measuring Multi-Scale Latent Torsion in Language Models</h3>
-            <p class="authors">Partha Pratim Saha, Samarth Raina, <span class="me">Mayur Parvatikar</span>, Amit Dhanda, Vinija Jain, Aman Chadha, Amitava Das</p>
-            <p class="venue">To be submitted to AAAI 2027, AI Alignment Track</p>
-            <p class="tldr">Introduces a geometry-based framework that measures how preference alignment reorganizes a model’s
-            internal representations, localizing where and how strongly alignment reshapes different concepts.</p>
+            <p class="authors">P. P. Saha, S. Raina, <span class="me">Mayur Parvatikar</span>, A. Dhanda, V. Jain, A. Chadha, A. Das</p>
+            <p class="venue">arXiv:2606.01060, 2026 · submitted to AAAI 2027</p>
+            <p class="tldr">Measures how alignment reorganizes internal representations across four aligned 7–8B model pairs; latent torsion
+            separates safe from unsafe prompts at AUC 0.89 vs. 0.64 for CKA, RepE and cosine baselines.</p>
+            <div class="chip-row">
+              <a class="chip" href="https://arxiv.org/abs/2606.01060" target="_blank" rel="noopener">arXiv ↗</a>
+              <button class="chip" type="button" data-bibtex-toggle="bib-mentis" aria-expanded="false">BibTeX</button>
+              <button class="chip" type="button" data-copy="bib-mentis">Copy BibTeX</button>
+            </div>
+            <pre class="bibtex" id="bib-mentis" hidden>@article{saha2026mentis,
+  title   = {{MENTIS}: What Belief Changes Under Alignment? Measuring Multi-Scale
+             Latent Torsion in Language Models},
+  author  = {Saha, P. P. and Raina, S. and Parvatikar, Mayur and Dhanda, A. and
+             Jain, V. and Chadha, A. and Das, A.},
+  journal = {arXiv preprint arXiv:2606.01060},
+  year    = {2026}
+}</pre>
           </div>
         </li>
 
@@ -104,7 +174,7 @@
       <ul class="pub-list">
 
         <li class="pub-item reveal" id="music">
-          <span class="pub-num">[03]</span>
+          <span class="pub-num">[05]</span>
           <div>
             <div class="meta-row">
               <span class="status status--ok">Best Paper Presentation Award</span>
@@ -112,9 +182,9 @@
             </div>
             <h3>A User-Aware Indian Music Recommendation System</h3>
             <p class="authors"><span class="me">Mayur Parvatikar</span>, Manoj Mukunda, Jayanth Chikkarangaiah, Mamatha G. S., G. Shobha</p>
-            <p class="venue">RAAI 2025, Nanyang Technological University, Singapore</p>
-            <p class="tldr">Combines an LSTM speech-emotion model with health-aware attributes for content-based music
-            recommendation, outperforming Spotify’s live queue on Precision@5.</p>
+            <p class="venue">2025 5th International Conference on Robotics, Automation, and Artificial Intelligence (IEEE RAAI 2025), Singapore</p>
+            <p class="tldr">Maps a listener’s emotion (LSTM speech-emotion model, 93.6% on RAVDESS) and health condition to
+            therapeutic attributes of Indian classical music, evaluated against Spotify’s live queue.</p>
             <div class="chip-row">
               <a class="chip" href="#">PDF</a><!-- EDIT -->
               <button class="chip" type="button" data-bibtex-toggle="bib-music" aria-expanded="false">BibTeX</button>
@@ -124,7 +194,8 @@
   title     = {A User-Aware Indian Music Recommendation System},
   author    = {Parvatikar, Mayur and Mukunda, Manoj and Chikkarangaiah, Jayanth
                and Mamatha, G. S. and Shobha, G.},
-  booktitle = {Recent Advances in Artificial Intelligence (RAAI)},
+  booktitle = {International Conference on Robotics, Automation, and
+               Artificial Intelligence (RAAI)},
   year      = {2025}
 }</pre>
           </div>
@@ -136,12 +207,12 @@
       <ul class="pub-list">
 
         <li class="pub-item reveal" id="simile">
-          <span class="pub-num">[04]</span>
+          <span class="pub-num">[06]</span>
           <div>
             <div class="meta-row"><span class="status">First author</span></div>
             <h3>Deep Learning Approaches to Simile Detection: Insights from BERT and LSTM</h3>
             <p class="authors"><span class="me">Mayur G. Parvatikar</span>, Sanjan Rao, P. M. Jayanth Rao, B. M. Sagar</p>
-            <p class="venue">ICCCNT 2024, IIT Mandi</p>
+            <p class="venue">2024 15th International Conference on Computing Communication and Networking Technologies (IEEE ICCCNT 2024), IIT Mandi</p>
             <p class="tldr">Compares BERT- and LSTM-based models for detecting similes in text, analyzing where contextual
             embeddings help most for figurative-language understanding.</p>
             <div class="chip-row">
@@ -172,8 +243,8 @@
     <nav class="footer-links" aria-label="Elsewhere">
       <a href="mailto:mayur.parvatikar@gmail.com">Email</a>
       <a href="#">Google Scholar</a>
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
+      <a href="https://github.com/mayurgp25" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mayurparvatikar" target="_blank" rel="noopener">LinkedIn</a>
     </nav>
   </div>
 </footer>
