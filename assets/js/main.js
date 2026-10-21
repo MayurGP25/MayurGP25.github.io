@@ -195,6 +195,56 @@
     }
   }
 
+  /* -------------------------------------------------------------- gallery */
+  var gallery = document.querySelector("[data-gallery]");
+  var lightbox = document.querySelector("[data-lightbox]");
+
+  if (gallery) {
+    var shots = Array.prototype.slice.call(gallery.querySelectorAll(".g-item"));
+    shots.forEach(function (fig) {
+      var img = fig.querySelector("img");
+      var w = +img.getAttribute("width"), h = +img.getAttribute("height");
+      if (w && h) fig.style.setProperty("--ar", (w / h).toFixed(4));
+    });
+
+    if (lightbox && typeof lightbox.showModal === "function") {
+      var lbImg = lightbox.querySelector("img");
+      var lbCap = lightbox.querySelector("figcaption");
+      var current = 0;
+      lightbox.classList.toggle("is-single", shots.length < 2);
+
+      var show = function (i) {
+        current = (i + shots.length) % shots.length;
+        var img = shots[current].querySelector("img");
+        var cap = shots[current].querySelector("figcaption");
+        lbImg.src = img.currentSrc || img.src;
+        lbImg.alt = img.alt;
+        lbCap.textContent = cap ? cap.textContent : "";
+      };
+
+      shots.forEach(function (fig, i) {
+        fig.querySelector(".g-open").addEventListener("click", function () {
+          show(i);
+          lightbox.showModal();
+        });
+      });
+      lightbox.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-lb]");
+        if (btn) {
+          var act = btn.getAttribute("data-lb");
+          if (act === "close") lightbox.close();
+          else show(current + (act === "next" ? 1 : -1));
+        } else if (e.target === lightbox || e.target.tagName === "FIGURE") {
+          lightbox.close();
+        }
+      });
+      lightbox.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") show(current + 1);
+        if (e.key === "ArrowLeft") show(current - 1);
+      });
+    }
+  }
+
   /* --------------------------------------------------------------- footer */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();

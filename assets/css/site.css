@@ -546,6 +546,53 @@ a:hover { text-decoration-color: currentColor; }
 .footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
 .footer-links a:hover { color: var(--ink); }
 
+/* --------------------------------------------------------------- gallery
+   Justified rows: each photo grows in proportion to its aspect ratio
+   (--ar, set from the img width/height), so a row shares one height. */
+.gallery { display: flex; flex-wrap: wrap; gap: 1rem; }
+.g-item { --ar: 1; flex: var(--ar) 1 calc(var(--ar) * 240px); margin: 0; min-width: 0; }
+.g-open {
+  display: block; width: 100%; padding: 0; border: 0; background: var(--surface-2);
+  cursor: zoom-in; overflow: hidden; border-radius: 3px;
+}
+.g-open img { width: 100%; height: auto; aspect-ratio: var(--ar); object-fit: cover; transition: transform .6s cubic-bezier(.2, .7, .2, 1), filter .4s ease; }
+.g-open:hover img { transform: scale(1.025); }
+.g-item figcaption { margin-top: .55rem; color: var(--muted); font: italic 500 1.02rem/1.35 var(--font-display); }
+
+@media (max-width: 560px) { .g-item { flex-basis: 100%; } }
+
+.lightbox {
+  width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; padding: 0;
+  border: 0; background: rgba(29, 24, 20, .94); color: #f0e7d9;
+}
+.lightbox::backdrop { background: transparent; }
+.lightbox[open] { display: grid; place-items: center; }
+.lightbox figure { margin: 0; display: grid; justify-items: center; gap: .8rem; padding: 4rem 4.5rem 2rem; max-height: 100vh; }
+.lightbox img { max-width: min(1200px, calc(100vw - 9rem)); max-height: calc(100vh - 9rem); width: auto; height: auto; object-fit: contain; box-shadow: 0 20px 60px rgba(0, 0, 0, .5); }
+.lightbox figcaption { font: italic 500 1.15rem/1.3 var(--font-display); opacity: .85; text-align: center; }
+.lb-btn {
+  position: absolute; display: grid; place-items: center; width: 46px; height: 46px;
+  border: 1px solid rgba(240, 231, 217, .25); border-radius: 50%; background: transparent; color: inherit; cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.lb-btn:hover { background: rgba(240, 231, 217, .1); border-color: rgba(240, 231, 217, .6); }
+.lb-btn svg { width: 20px; height: 20px; }
+.lb-close { top: 1.25rem; right: 1.25rem; }
+.lb-prev { left: 1.25rem; top: 50%; translate: 0 -50%; }
+.lb-next { right: 1.25rem; top: 50%; translate: 0 -50%; }
+.lightbox.is-single .lb-prev, .lightbox.is-single .lb-next { display: none; }
+
+@media (max-width: 700px) {
+  .lightbox figure { padding: 4rem 1rem 5rem; }
+  .lightbox img { max-width: calc(100vw - 2rem); max-height: calc(100vh - 11rem); }
+  .lb-prev, .lb-next { top: auto; bottom: 1.25rem; translate: none; }
+  .lb-prev { left: calc(50% - 56px); }
+  .lb-next { right: calc(50% - 56px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox[open] img { animation: fade .35s ease; }
+}
+
 /* --------------------------------------------------------------- motion
    Hero: one quiet entrance on load. Timeline: the rail fills with scroll,
    each dot fills as the line reaches it, and cards ease in from their side. */

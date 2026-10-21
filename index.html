@@ -46,6 +46,7 @@
         <a href="index.html#timeline">Timeline</a>
         <a href="publications.html">Publications</a>
         <a href="projects.html">Projects</a>
+        <a href="index.html#gallery">Gallery</a>
         <a href="cv.html">CV</a>
       </nav>
       <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
@@ -62,17 +63,9 @@
 <main id="main">
   <div class="wrap">
 
-    <!-- ===================================================== MICCAI banner -->
-    <aside class="banner">
-      <span class="pill">MICCAI 2026</span>
-      <p><strong>Hey MICCAI visitors</strong> — here is the PATH-DISSECT overview.</p>
-      <a class="banner-link" href="https://claude.ai/artifact/VpfUEAo7BVs6aiAtDxrm1Q" target="_blank" rel="noopener">Check this out ↗</a>
-    </aside>
-
     <!-- ============================================================= hero -->
     <section class="hero" id="about">
       <div>
-        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Applying to PhD programs · Fall 2027</p><!-- EDIT if not accurate -->
 
         <h1>Mayur Parvatikar</h1>
         <p class="role">Associate Platform Engineer, SAP Labs Bengaluru · ML researcher in interpretability &amp; alignment</p>
@@ -107,9 +100,8 @@
 
       <figure class="portrait">
         <div class="portrait-frame">
-          <img src="assets/img/mayur.jpg" alt="Mayur Parvatikar presenting the PATH-DISSECT poster at MICCAI 2026, Strasbourg" width="400" height="500">
+          <img src="assets/img/mayur.jpg" alt="Mayur Parvatikar at MICCAI 2026" width="400" height="500">
         </div>
-        <figcaption><span>MICCAI 2026, Strasbourg</span><span>PATH-DISSECT poster</span></figcaption>
       </figure>
     </section>
 
@@ -234,7 +226,7 @@
         </li>
 
         <li class="tl-item reveal" data-type="paper">
-          <time class="tl-date">Mar 2025 – Jul 2026</time>
+          <time class="tl-date">Mar – Jul 2026</time>
           <span class="tl-rail" aria-hidden="true"><span class="tl-dot"></span></span>
           <article class="tl-card">
             <div class="meta-row">
@@ -253,7 +245,7 @@
         </li>
 
         <li class="tl-item reveal" data-type="paper">
-          <time class="tl-date">Mar 2025 – Jul 2026</time>
+          <time class="tl-date">Mar – Jul 2026</time>
           <span class="tl-rail" aria-hidden="true"><span class="tl-dot"></span></span>
           <article class="tl-card">
             <div class="meta-row">
@@ -488,6 +480,55 @@
           </div>
         </li>
       </ul>
+    </section>
+
+    <!-- ========================================================== gallery
+         Add a photo: put it in assets/img/gallery/ (long side ~1600px) and
+         copy one <figure> block. Captions are optional. -->
+    <section class="section" id="gallery">
+      <div class="section-head">
+        <div>
+          <h2>Gallery</h2>
+          <p class="sub">Conferences, talks and the people along the way.</p>
+        </div>
+      </div>
+
+      <div class="gallery" data-gallery>
+        <figure class="g-item">
+          <button type="button" class="g-open" aria-label="View larger: At the poster session, MICCAI 2026">
+            <img src="assets/img/gallery/miccai-2026-poster-session.jpg" alt="Mayur standing beside posters in the MICCAI 2026 poster hall" width="1200" height="1600" loading="lazy">
+          </button>
+          <figcaption>At the poster session, MICCAI 2026</figcaption>
+        </figure>
+        <figure class="g-item g-wide">
+          <button type="button" class="g-open" aria-label="View larger: Strasbourg Convention Centre">
+            <img src="assets/img/gallery/miccai-2026-sign.jpg" alt="Mayur standing among the large MICCAI 26 letters outside the Strasbourg Convention Centre" width="1600" height="1200" loading="lazy">
+          </button>
+          <figcaption>Strasbourg Convention Centre</figcaption>
+        </figure>
+        <figure class="g-item">
+          <button type="button" class="g-open" aria-label="View larger: Welcome arch, MICCAI 2026">
+            <img src="assets/img/gallery/miccai-2026-entrance.jpg" alt="The Welcome to MICCAI 2026 arch at the conference entrance" width="1200" height="1600" loading="lazy">
+          </button>
+          <figcaption>Welcome arch, MICCAI 2026</figcaption>
+        </figure>
+      </div>
+
+      <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
+        <figure>
+          <img alt="">
+          <figcaption></figcaption>
+        </figure>
+        <button type="button" class="lb-btn lb-close" data-lb="close" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+        <button type="button" class="lb-btn lb-prev" data-lb="prev" aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+        </button>
+        <button type="button" class="lb-btn lb-next" data-lb="next" aria-label="Next photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </dialog>
     </section>
 
     <!-- ========================================================= contact -->
