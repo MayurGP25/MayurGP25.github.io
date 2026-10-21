@@ -284,18 +284,22 @@ a:hover { text-decoration-color: currentColor; }
 
 /* ----------------------------------------------------------------- stats */
 .stats {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid; grid-template-columns: minmax(0, 1.9fr) repeat(3, minmax(0, 1fr));
   border-block: 1px solid var(--line);
 }
+.stats .stat--lead b { color: var(--accent); white-space: nowrap; }
 .stat { padding: 1.4rem 1.5rem; }
 .stat + .stat { border-left: 1px solid var(--line); }
 .stat b { display: block; font: 600 2.6rem/1 var(--font-display); color: var(--ink); }
 .stat span { display: block; margin-top: .4rem; color: var(--muted); font-size: .85rem; }
 
 @media (max-width: 700px) {
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stat:nth-child(3) { border-left: 0; }
-  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stat { padding: 1.2rem 1rem; }
+  .stat--lead { grid-column: 1 / -1; }
+  .stat--lead b { font-size: 2.2rem; }
+  .stat:nth-child(2) { border-left: 0; }
+  .stat:nth-child(n+2) { border-top: 1px solid var(--line); }
 }
 
 /* -------------------------------------------------------------- sections */
